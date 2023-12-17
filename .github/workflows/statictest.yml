@@ -31,5 +31,5 @@ jobs:
 
       - name: Run statictest
         run: |
- go mod init diplom.com
+
           go vet -vettool=$(which statictest) ./...
