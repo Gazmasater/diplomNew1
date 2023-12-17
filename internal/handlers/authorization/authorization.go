@@ -15,8 +15,6 @@ import (
 	"diplom.com/go-musthave-diploma-tpl/internal/storage/redis"
 )
 
-//
-
 type AuthHandler struct {
 	checkUser   CredentialsChecker
 	RedisClient *redis.RedisClient
