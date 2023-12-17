@@ -1,6 +1,7 @@
 name: go vet test
 
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
@@ -8,6 +9,7 @@ on:
       - main
 
 jobs:
+
   statictest:
     runs-on: ubuntu-latest
     container: golang:1.21
@@ -18,11 +20,11 @@ jobs:
       - name: Download statictest binary
         uses: robinraju/release-downloader@v1.8
         with:
-          repository: Yandex-Practicum/go-autotests
-          latest: true
-          fileName: statictest
-          out-file-path: .tools
-          token: ${{ secrets.GITHUB_TOKEN }}
+            repository: Yandex-Practicum/go-autotests
+            latest: true
+            tag: "v0.9.16"
+            fileName: statictest
+            out-file-path: .tools
 
       - name: Setup autotest binary
         run: |
