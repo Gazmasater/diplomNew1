@@ -77,7 +77,7 @@ func (a *AuthHandler) AuthorizationHandler(w http.ResponseWriter, r *http.Reques
 			return
 		}
 		w.WriteHeader(http.StatusOK)
-		//Надо ли?
+
 		fmt.Fprintf(w, "You have successfully authorized")
 		a.log.LogInfo("user", id, "successfully authorized")
 	} else {
