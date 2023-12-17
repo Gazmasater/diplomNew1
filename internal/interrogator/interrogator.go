@@ -10,6 +10,8 @@ import (
 
 	"diplom.com/go-musthave-diploma-tpl/internal/config"
 	"diplom.com/go-musthave-diploma-tpl/internal/dto"
+	"diplom.com/go-musthave-diploma-tpl/internal/logger"
+	"diplom.com/go-musthave-diploma-tpl/internal/storage/postgres"
 )
 
 type Interrogator struct {
