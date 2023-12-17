@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
+	"diplom.com/go-musthave-diploma-tpl/internal/logger"
+	"diplom.com/go-musthave-diploma-tpl/internal/storage/redis"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/golang-jwt/jwt/v4/request"
 )

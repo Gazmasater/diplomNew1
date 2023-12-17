@@ -11,6 +11,7 @@ import (
 	"diplom.com/go-musthave-diploma-tpl/internal/authentication"
 	"diplom.com/go-musthave-diploma-tpl/internal/credentials"
 	"diplom.com/go-musthave-diploma-tpl/internal/logger"
+	"diplom.com/go-musthave-diploma-tpl/internal/storage/redis"
 	"github.com/google/uuid"
 )
 
