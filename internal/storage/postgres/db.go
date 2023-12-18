@@ -14,6 +14,7 @@ type Database struct {
 	db *pgxpool.Pool
 }
 
+// таблица users
 const createUsersTableQuery = `
       CREATE TABLE IF NOT EXISTS users (
     UserId VARCHAR(255) PRIMARY KEY,
