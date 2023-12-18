@@ -4,8 +4,9 @@ import (
 	"net/http"
 	"time"
 
-	"diplom.com/internal/authentication"
 	"diplom.com/internal/config"
+
+	"diplom.com/internal/authentication"
 	"diplom.com/internal/handlers/addorder"
 	"diplom.com/internal/handlers/authorization"
 	"diplom.com/internal/handlers/charge"
