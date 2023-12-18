@@ -7,9 +7,9 @@ import (
 	"io"
 	"net/http"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/authentication"
-	"diplom.com/go-musthave-diploma-tpl/internal/logger"
-	"diplom.com/go-musthave-diploma-tpl/internal/storage/redis"
+	"diplom.com/internal/authentication"
+	"diplom.com/internal/logger"
+	"diplom.com/internal/storage/redis"
 	"github.com/ShiraazMoollatjie/goluhn"
 )
 
