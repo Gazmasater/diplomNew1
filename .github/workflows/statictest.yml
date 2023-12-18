@@ -34,5 +34,3 @@ jobs:
       - name: Run statictest
         run: |
           go vet -vettool=$(which statictest) ./...
-          
-
