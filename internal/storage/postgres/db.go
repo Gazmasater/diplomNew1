@@ -24,6 +24,7 @@ const createUsersTableQuery = `
 );
     `
 
+// таблица user_orders
 const createUserOrdersTableQuery = `
 	CREATE TABLE IF NOT EXISTS user_orders (
 	OrderId SERIAL PRIMARY KEY,
