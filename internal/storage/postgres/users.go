@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/dto"
+	"diplom.com/internal/dto"
 	"github.com/jackc/pgx/v5"
 )
 
