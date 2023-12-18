@@ -14,8 +14,8 @@ import (
 )
 
 var (
-	ErrOrderExists   = errors.New("this order already exists, please try another one")
-	ErrDifferentUser = errors.New("another user has already placed an order with this number")
+	ErrOrderExists   = errors.New("этот заказ уже существует, пожалуйста, попробуйте другой")
+	ErrDifferentUser = errors.New("другой пользователь уже разместил заказ с этим номером")
 )
 
 type AddOrderHandler struct {
