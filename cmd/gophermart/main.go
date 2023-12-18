@@ -58,7 +58,7 @@ func main() {
 	r := chi.NewRouter()
 
 	r.Use(log.MyLogger)
-
+	// Роутер
 	r.Group(func(r chi.Router) {
 		r.Use(JWTMiddleware.JWTMiddleware())
 		r.Post("/api/user/orders", addorder.NewPutOrderNumberHandler(app, redisClient, log).AddOrderNumberHandler)
