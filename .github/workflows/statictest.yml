@@ -32,5 +32,5 @@ jobs:
           mv $GITHUB_WORKSPACE/.tools/statictest /usr/local/bin/statictest
 
       - name: Run statictest
-        run: |
-          go vet -vettool=$(which statictest) ./...
+      run: |
+      go vet -vettool=statictest ./...
