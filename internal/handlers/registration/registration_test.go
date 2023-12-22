@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/handlers/registration/mocks"
+	"diplom.com/internal/handlers/registration/mocks"
 	"github.com/stretchr/testify/mock"
 )
 

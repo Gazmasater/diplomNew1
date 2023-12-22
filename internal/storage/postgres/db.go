@@ -14,6 +14,7 @@ type Database struct {
 	db *pgxpool.Pool
 }
 
+// таблица users
 const createUsersTableQuery = `
       CREATE TABLE IF NOT EXISTS users (
     UserId VARCHAR(255) PRIMARY KEY,
@@ -23,6 +24,7 @@ const createUsersTableQuery = `
 );
     `
 
+// таблица user_orders
 const createUserOrdersTableQuery = `
 	CREATE TABLE IF NOT EXISTS user_orders (
 	OrderId SERIAL PRIMARY KEY,

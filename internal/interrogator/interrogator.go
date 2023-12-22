@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"time"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/config"
-	"diplom.com/go-musthave-diploma-tpl/internal/dto"
-	"diplom.com/go-musthave-diploma-tpl/internal/logger"
-	"diplom.com/go-musthave-diploma-tpl/internal/storage/postgres"
+	"diplom.com/internal/config"
+	"diplom.com/internal/dto"
+	"diplom.com/internal/logger"
+	"diplom.com/internal/storage/postgres"
 )
 
 type Interrogator struct {

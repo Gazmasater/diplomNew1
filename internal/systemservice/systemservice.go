@@ -3,8 +3,8 @@ package systemservice
 import (
 	"context"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/dto"
-	"diplom.com/go-musthave-diploma-tpl/internal/storage/postgres"
+	"diplom.com/internal/dto"
+	"diplom.com/internal/storage/postgres"
 )
 
 type service struct {
