@@ -77,7 +77,6 @@ func (d *Database) GetOrderNumbers(ctx context.Context) ([]string, error) {
 	return orderNumbers, nil
 }
 
-// Получение ордера
 func (d *Database) GetOrders(ctx context.Context, userID string) ([]dto.FullOrder, error) {
 	getOrdersQuery := `
 		SELECT  ordernumber, status, COALESCE(accrual, 0) AS accrual, orderdate
