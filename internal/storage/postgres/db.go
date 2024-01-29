@@ -123,3 +123,18 @@ func (d *Database) CredentialsGetter(ctx context.Context, user string) (string, 
 
 	return password, id, nil
 }
+
+func (d *Database) CredentialsGetterOptimiz(ctx context.Context, user string) (string, string, error) {
+	var password string
+	var id string
+	err := d.db.QueryRow(ctx, "SELECT password, userid FROM users WHERE username = $1", user).Scan(&password, &id)
+
+	if err != nil {
+		if err == pgx.ErrNoRows {
+			return "", "", errors.New("user not found")
+		}
+		return "", "", fmt.Errorf("error when getting hash password from database: %v", err)
+	}
+
+	return password, id, nil
+}

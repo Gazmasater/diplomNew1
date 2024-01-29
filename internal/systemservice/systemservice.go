@@ -31,8 +31,8 @@ func (s *service) UserSetter(ctx context.Context, user, password, id string) err
 	return nil
 }
 
-func (s *service) CredentialsGetter(ctx context.Context, user string) (string, string, error) {
-	hashPassword, id, err := s.db.CredentialsGetter(ctx, user)
+func (s *service) CredentialsGetterOptimiz(ctx context.Context, user string) (string, string, error) {
+	hashPassword, id, err := s.db.CredentialsGetterOptimiz(ctx, user)
 	return hashPassword, id, err
 }
 
