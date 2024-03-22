@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/authentication"
-	"diplom.com/go-musthave-diploma-tpl/internal/dto"
-	"diplom.com/go-musthave-diploma-tpl/internal/interrogator"
-	"diplom.com/go-musthave-diploma-tpl/internal/logger"
+	"diplom.com/internal/authentication"
+	"diplom.com/internal/dto"
+	"diplom.com/internal/interrogator"
+	"diplom.com/internal/logger"
 )
 
 type GetOrdersHandler struct {

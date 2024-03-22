@@ -7,9 +7,9 @@ import (
 	"io"
 	"net/http"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/authentication"
-	"diplom.com/go-musthave-diploma-tpl/internal/dto"
-	"diplom.com/go-musthave-diploma-tpl/internal/logger"
+	"diplom.com/internal/authentication"
+	"diplom.com/internal/dto"
+	"diplom.com/internal/logger"
 )
 
 type ChargeHandler struct {

@@ -9,10 +9,10 @@ import (
 	"net/http"
 	"time"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/authentication"
-	"diplom.com/go-musthave-diploma-tpl/internal/credentials"
-	"diplom.com/go-musthave-diploma-tpl/internal/logger"
-	"diplom.com/go-musthave-diploma-tpl/internal/storage/redis"
+	"diplom.com/internal/authentication"
+	"diplom.com/internal/credentials"
+	"diplom.com/internal/logger"
+	"diplom.com/internal/storage/redis"
 )
 
 type AuthHandler struct {
@@ -22,7 +22,7 @@ type AuthHandler struct {
 }
 
 type CredentialsChecker interface {
-	CredentialsGetter(ctx context.Context, user string) (string, string, error)
+	CredentialsGetterOptimiz(ctx context.Context, user string) (string, string, error)
 }
 
 func NewAuthorizationHandler(ch CredentialsChecker, redis *redis.RedisClient, log *logger.Logger) *AuthHandler {
@@ -55,7 +55,7 @@ func (a *AuthHandler) AuthorizationHandler(w http.ResponseWriter, r *http.Reques
 		return
 	}
 
-	hashPasswordFromDB, id, err := a.checkUser.CredentialsGetter(ctx, user.Username)
+	hashPasswordFromDB, id, err := a.checkUser.CredentialsGetterOptimiz(ctx, user.Username)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusUnauthorized)
 		return

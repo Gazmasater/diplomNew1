@@ -14,6 +14,7 @@ type Database struct {
 	db *pgxpool.Pool
 }
 
+// таблица users
 const createUsersTableQuery = `
       CREATE TABLE IF NOT EXISTS users (
     UserId VARCHAR(255) PRIMARY KEY,
@@ -23,6 +24,7 @@ const createUsersTableQuery = `
 );
     `
 
+// таблица user_orders
 const createUserOrdersTableQuery = `
 	CREATE TABLE IF NOT EXISTS user_orders (
 	OrderId SERIAL PRIMARY KEY,
@@ -108,6 +110,21 @@ func (d *Database) UserSetter(ctx context.Context, user, password, id string) er
 }
 
 func (d *Database) CredentialsGetter(ctx context.Context, user string) (string, string, error) {
+	var password string
+	var id string
+	err := d.db.QueryRow(ctx, "SELECT password, userid FROM users WHERE username = $1", user).Scan(&password, &id)
+
+	if err != nil {
+		if err == pgx.ErrNoRows {
+			return "", "", errors.New("user not found")
+		}
+		return "", "", fmt.Errorf("error when getting hash password from database: %v", err)
+	}
+
+	return password, id, nil
+}
+
+func (d *Database) CredentialsGetterOptimiz(ctx context.Context, user string) (string, string, error) {
 	var password string
 	var id string
 	err := d.db.QueryRow(ctx, "SELECT password, userid FROM users WHERE username = $1", user).Scan(&password, &id)
