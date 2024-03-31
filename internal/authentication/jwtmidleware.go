@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/logger"
-	"diplom.com/go-musthave-diploma-tpl/internal/storage/redis"
+	"diplom.com/internal/logger"
+	"diplom.com/internal/storage/redis"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/golang-jwt/jwt/v4/request"
 )
@@ -16,6 +16,7 @@ type JWTMiddleware struct {
 	Log         *logger.Logger
 }
 
+// мидлваре
 func (j *JWTMiddleware) JWTMiddleware() func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		jwtCheck := func(w http.ResponseWriter, r *http.Request) {

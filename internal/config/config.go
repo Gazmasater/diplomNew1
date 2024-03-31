@@ -19,8 +19,8 @@ const (
 
 	defaultConnStr = "host=localhost port=5432 user=lew password=qwert dbname=diplom sslmode=disable"
 
-	defaultAccrualAddress = "http://localhost:8888" //delete this before push
-	defaultRedisAddress   = "localhost:6379"        //localhost
+	defaultAccrualAddress = "http://localhost:8888"
+	defaultRedisAddress   = "localhost:6379" //localhost
 )
 
 func Load() RunConfig {
