@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/dto"
+	"diplom.com/internal/dto"
 )
 
 func (d *Database) GetWithdrawals(ctx context.Context, userID string) ([]*dto.Billing, error) {

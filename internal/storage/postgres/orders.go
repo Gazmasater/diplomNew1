@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"diplom.com/go-musthave-diploma-tpl/internal/dto"
-	"diplom.com/go-musthave-diploma-tpl/internal/handlers/addorder"
+	"diplom.com/internal/dto"
+	"diplom.com/internal/handlers/addorder"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgconn"
 )
