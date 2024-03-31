@@ -7,6 +7,7 @@ import (
 	"diplom.com/internal/router"
 )
 
+// main
 func main() {
 	cfg := config.Load()
 
